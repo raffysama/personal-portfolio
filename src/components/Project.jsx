@@ -8,7 +8,7 @@ const projects = [
     description:
       "Maintain and enchanced a production system used by thousands of users, Built new features, fixed issues and improved performance.",
     status: "Done",
-    image: "src/assets/images/duskin.png",
+    image: "/images/duskin.png",
     icons: [
       "devicon-html5-plain colored",
       "devicon-javascript-plain colored",
@@ -22,7 +22,7 @@ const projects = [
     description:
       "Real-time tracking system with live location, updates and history, Optimized for performance and usability",
     status: "In-Progress",
-    image: "src/assets/images/eztracking.png",
+    image: "/images/eztracking.png",
     icons: [
       "devicon-react-original colored",
       "devicon-tailwindcss-plain colored",
@@ -36,7 +36,7 @@ const projects = [
     description:
       "Real-time tracking system with live location, updates and history, Optimized for performance and usability",
     status: "In-Progress",
-    image: "src/assets/images/eztracking.png",
+    image: "/images/eztracking.png",
     icons: [
       "devicon-react-original colored",
       "devicon-tailwindcss-plain colored",

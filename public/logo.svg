@@ -1,0 +1,28 @@
+<svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rafGrad" x1="0" y1="0" x2="150" y2="40">
+      <stop offset="0%" stop-color="#2563EB"></stop>
+      <stop offset="100%" stop-color="#3B82F6"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Group for perfect alignment -->
+  <g transform="translate(0, 2)">
+    
+    <!-- </ -->
+    <text x="0" y="26" font-family="JetBrains Mono, SFMono-Regular, monospace" font-size="24" font-weight="500" fill="#2563EB" letter-spacing="-1">
+      &lt;/
+    </text>
+
+    <!-- Raf -->
+    <text x="28" y="26" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="600" fill="url(#rafGrad)" letter-spacing="-0.5">
+      Raf
+    </text>
+
+    <!-- > -->
+    <text x="88" y="26" font-family="JetBrains Mono, SFMono-Regular, monospace" font-size="24" font-weight="500" fill="#2563EB" letter-spacing="-1">
+      &gt;
+    </text>
+
+  </g>
+</svg>

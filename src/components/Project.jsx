@@ -51,10 +51,10 @@ function Project() {
     <>
       <div className="px-6 py-20 bg-gray-100">
         <div className="w-full px-6 md:px-10 lg:px-16">
-          <h1 className="text-sm font-bold uppercase tracking-widest text-blue-500">
+          <h1 className="text-sm font-bold uppercase tracking-widest text-gray-500">
             Featured Projects
           </h1>
-          <p className="mt-4 text-2xl md:text-3xl font-bold text-gray-900">
+          <p className="mt-4 text-2xl md:text-3xl font-bold text-[#005377]">
             Some thing I've built
           </p>
           <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">

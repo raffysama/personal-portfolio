@@ -43,7 +43,7 @@ function Skills() {
         <h1 className="text-sm font-bold uppercase tracking-widest text-gray-500">
           Trusted By
         </h1>
-        <p className="mt-4 text-2xl md:text-3xl font-bold text-gray-900">
+        <p className="mt-4 text-2xl md:text-3xl font-bold text-[#005377]">
           Tech I Work With
         </p>
         <div className="cards grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 mt-10">

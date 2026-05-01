@@ -9,8 +9,10 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <>
-      <div className="min-h-screen bg-transparent bg-cover bg-center bg-[url(/hero-background.png)] w-full px-6 md:px-10 lg:px-16">
+      <div className="fixed top-0 w-full z-10">
         <Navbar />
+      </div>
+      <div className="min-h-min bg-gray-100 bg-cover  w-full px-6 md:px-10 lg:px-16">
         <Hero />
       </div>
       <div className="w-full px-6 md:px-10 lg:px-16">

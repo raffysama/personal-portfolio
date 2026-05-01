@@ -70,9 +70,20 @@ function Hero() {
           </a>
         </div>
         {/* STATUS */}
-        <div className="flex items-center mt-8 gap-2">
+        <div className="flex items-center mt-8">
           <Dot size={35} className="text-green-500" />
           <p className="text-[#1c2333] font-semibold">Available for work</p>
+        </div>
+        <div className="mt-10 ml-10 flex gap-6">
+          <div>
+            <p className="text-2xl font-bold text-[#06a77d]">5+</p>
+            <p className="text-xs text-[#1c2333]">Projects</p>
+          </div>
+
+          <div>
+            <p className="text-2xl font-bold text-[#005377]">4yr+</p>
+            <p className="text-xs text-[#1c2333]">Experience</p>
+          </div>
         </div>
       </div>
 

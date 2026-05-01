@@ -50,9 +50,10 @@ function Navbar() {
 
   return (
     <nav
-      className={`p-4 bg-white/80 backdrop-blur-md sticky top-0 z-50 px-6 md:px-10 lg:px-16 transition-all duration-300 ${
-        scrolled ? "shadow-[0_2px_15px_rgba(0,0,0,0.06)]" : "shadow-none"
-      }`}
+      className={`bg-white/80 backdrop-blur-md sticky top-0 z-50
+        px-4 py-2 md:px-6 md:py-4 lg:px-16
+        transition-all duration-300
+        ${scrolled ? "shadow-[0_2px_15px_rgba(0,0,0,0.06)]" : "shadow-none"}`}
     >
       <div className="flex items-center justify-between">
         {/* Logo */}
@@ -116,15 +117,11 @@ function Navbar() {
 
       {/* MOBILE MENU PANEL */}
       <div
-        className={`fixed top-0 right-0 h-screen w-[80%] sm:w-[380px] z-50
-    border-l border-[#06a77d]/20
-    bg-[#0a0e18]
-    shadow-[0_0_60px_rgba(0,0,0,0.8)]
+        className={`fixed top-0 right-0 h-screen w-[80%] sm:w-[380px] z-50 shadow-[0_0_60px_rgba(0,0,0,0.8)]
     transform transition-transform duration-300 ease-out
     ${open ? "translate-x-0" : "translate-x-full"}`}
       >
-        {/* GRADIENT LAYER (FIX FOR TRANSPARENCY ISSUE) */}
-        <div className="absolute inset-0 bg-linear-to-b from-[#1c2333] via-[#0f1520] to-[#0a0e18]" />
+        <div className="absolute inset-0 bg-white" />
 
         <div className="relative p-6 flex flex-col h-full">
           {/* TOP BAR */}
@@ -145,7 +142,7 @@ function Navbar() {
           <div className="my-6 h-px bg-[#06a77d]/20" />
 
           {/* NAV TITLE */}
-          <p className="text-xs uppercase tracking-widest mb-3 text-[#005377]">
+          <p className="text-xs font-semibold uppercase tracking-widest mb-3 text-[#005377]">
             Navigation
           </p>
 
@@ -157,7 +154,7 @@ function Navbar() {
                 href={`#${item.toLowerCase()}`}
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-between px-4 py-4 rounded-xl
-            text-[#a0aec0] border border-transparent
+            text-[#1c2333] border border-transparent
             transition-all duration-200
             hover:text-[#06a77d] hover:bg-[#06a77d]/5 hover:border-[#06a77d]/25"
               >
@@ -172,7 +169,7 @@ function Navbar() {
           <div className="mt-auto">
             <div className="my-6 h-px bg-[#06a77d]/20" />
 
-            <p className="text-xs uppercase tracking-widest mb-3 text-[#005377]">
+            <p className="text-xs uppercase tracking-widest mb-3 text-[#005377] font-semibold">
               Get my CV
             </p>
 

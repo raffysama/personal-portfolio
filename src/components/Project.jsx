@@ -18,17 +18,18 @@ const projects = [
   },
   {
     id: 2,
-    title: "EZ Tracking",
+    title: "Mini CRM / Pipeline Dashboard",
     description:
-      "Real-time tracking system with live location, updates and history, Optimized for performance and usability",
+      "Full-stack CRM dashboard with lead management, kanban pipeline, auth, and real-time data powered by Supabase.",
     status: "In-Progress",
-    image: "/images/eztracking.png",
+    image: "/images/mini_crm.png",
     icons: [
       "devicon-react-original colored",
       "devicon-tailwindcss-plain colored",
-      "devicon-firebase-plain colored",
+      "devicon-supabase-plain colored",
+      "devicon-typescript-plain colored",
     ],
-    links: "https://ez-tracking-iota.vercel.app/",
+    links: "https://mini-crm-pipeline-dashboard.vercel.app/",
   },
   {
     id: 3,
@@ -49,19 +50,21 @@ const projects = [
 function Project() {
   return (
     <>
-      <div className="px-6 py-20 bg-gray-100">
-        <div className="w-full px-6 md:px-10 lg:px-16">
+      <div className="px-6 py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
           <h1 className="text-sm font-bold uppercase tracking-widest text-gray-500">
             Featured Projects
           </h1>
-          <p className="mt-4 text-2xl md:text-3xl font-bold text-[#005377]">
-            Some thing I've built
+          <p className="mt-2 text-2xl md:text-3xl font-bold text-[#005377]">
+            Something I've Built
           </p>
-          <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {projects.map((item) => (
-              <div className="bg-white rounded-2xl  shadow-[0_10px_30px_rgba(0,0,0,0.08),0_-2px_10px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12),0_-4px_15px_rgba(0,0,0,0.05)]">
+              <div
+                key={item.id}
+                className="bg-white rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+              >
                 <ProjectCards
-                  key={item.id}
                   image={item.image}
                   title={item.title}
                   description={item.description}

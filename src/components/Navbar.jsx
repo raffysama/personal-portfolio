@@ -87,7 +87,7 @@ function Navbar() {
         {/* DESKTOP BUTTON */}
         <a
           href="/cv.pdf"
-          download="Raffy-CV.pdf"
+          download="Raffy_Gumapo_CV.pdf"
           className="hidden lg:flex border border-[#1c2333] text-[#1c2333] font-semibold px-6 py-2 rounded-full items-center gap-3 hover:border-[#1c2333] hover:scale-[1.03] transition-all"
         >
           Download CV

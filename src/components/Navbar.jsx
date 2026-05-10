@@ -86,7 +86,7 @@ function Navbar() {
 
         {/* DESKTOP BUTTON */}
         <a
-          href="/cv.pdf"
+          href="/Raffy_Gumapo_CV.pdf"
           download="Raffy_Gumapo_CV.pdf"
           className="hidden lg:flex border border-[#1c2333] text-[#1c2333] font-semibold px-6 py-2 rounded-full items-center gap-3 hover:border-[#1c2333] hover:scale-[1.03] transition-all"
         >
@@ -174,8 +174,8 @@ function Navbar() {
             </p>
 
             <a
-              href="/cv.pdf"
-              download="Raffy-CV.pdf"
+              href="/Raffy_Gumapo_CV.pdf"
+              download="Raffy_Gumapo_CV.pdf"
               className="w-full flex items-center justify-center gap-3 px-6 py-3 rounded-xl
           font-semibold transition-all duration-200 hover:scale-[1.02]"
               style={{

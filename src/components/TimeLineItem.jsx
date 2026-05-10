@@ -37,7 +37,7 @@ function TimeLineItem() {
           My professional journey
         </p>
         <a
-          href="/cv.pdf"
+          href="/Raffy_Gumapo_CV.pdf"
           download="Raffy_Gumapo_CV.pdf"
           className="px-4 sm:px-5 py-3 flex items-center gap-2 text-xs sm:text-sm font-semibold bg-white rounded-2xl text-gray-800
     shadow-[0_10px_30px_rgba(0,0,0,0.08),0_-2px_10px_rgba(0,0,0,0.03)]

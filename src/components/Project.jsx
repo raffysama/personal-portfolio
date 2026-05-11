@@ -45,6 +45,21 @@ const projects = [
     ],
     links: "https://ez-tracking-iota.vercel.app/",
   },
+  {
+    id: 5,
+    title: "TechVault",
+    description:
+      "A full-stack e-commerce store for tech products. Features product browsing, cart management, user authentication, and order history — built with React, TypeScript, and Supabase.",
+    status: "In-Progress",
+    image: "/images/techvault.png",
+    icons: [
+      "devicon-react-original colored",
+      "devicon-typescript-plain colored",
+      "devicon-tailwindcss-plain colored",
+      "devicon-supabase-plain colored",
+    ],
+    links: "https://techvault-coral.vercel.app/",
+  },
 ];
 
 function Project() {

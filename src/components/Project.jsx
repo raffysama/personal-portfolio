@@ -5,8 +5,9 @@ const projects = [
   {
     id: 1,
     title: "Duskin Health Rent",
+    category: "Maintenance",
     description:
-      "Maintain and enchanced a production system used by thousands of users, Built new features, fixed issues and improved performance.",
+      "Maintained and enhanced a production system used by thousands of users. Built new features, fixed issues, and improved performance.",
     status: "Done",
     image: "/images/duskin.png",
     icons: [
@@ -19,6 +20,7 @@ const projects = [
   {
     id: 2,
     title: "Mini CRM / Pipeline Dashboard",
+    category: "Full-stack",
     description:
       "Full-stack CRM dashboard with lead management, kanban pipeline, auth, and real-time data powered by Supabase.",
     status: "In-Progress",
@@ -34,8 +36,9 @@ const projects = [
   {
     id: 3,
     title: "EZ Tracking",
+    category: "Tracking App",
     description:
-      "Real-time tracking system with live location, updates and history, Optimized for performance and usability",
+      "Real-time tracking system with live location, updates, and history. Optimized for performance and usability.",
     status: "In-Progress",
     image: "/images/eztracking.png",
     icons: [
@@ -48,8 +51,9 @@ const projects = [
   {
     id: 5,
     title: "TechVault",
+    category: "E-commerce",
     description:
-      "A full-stack e-commerce store for tech products. Features product browsing, cart management, user authentication, and order history — built with React, TypeScript, and Supabase.",
+      "A full-stack e-commerce store for tech products with product browsing, cart management, user authentication, and order history.",
     status: "In-Progress",
     image: "/images/techvault.png",
     icons: [
@@ -60,39 +64,58 @@ const projects = [
     ],
     links: "https://techvault-coral.vercel.app/",
   },
+  {
+    id: 6,
+    title: "WarehouseIQ",
+    category: "Inventory System",
+    description:
+      "A full-stack inventory management system with authentication, role-based access, inventory management, stock transactions, dashboard insights, and staff management.",
+    status: "In-Progress",
+    image: "/images/warehouseiq.png",
+    icons: [
+      "devicon-react-original colored",
+      "devicon-typescript-plain colored",
+      "devicon-tailwindcss-plain colored",
+      "devicon-supabase-plain colored",
+    ],
+    links: "https://warehouse-iq-ten.vercel.app/",
+  },
 ];
 
 function Project() {
   return (
-    <>
-      <div className="px-6 py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+    <section className="bg-[#e5e9ee] px-3 py-20">
+      <div className="mx-auto max-w-[1500px]">
+        <div className="mb-10 px-2">
           <h1 className="text-sm font-bold uppercase tracking-widest text-gray-500">
             Featured Projects
           </h1>
-          <p className="mt-2 text-2xl md:text-3xl font-bold text-[#005377]">
+          <p className="mt-2 text-2xl font-bold text-[#005377] md:text-3xl">
             Something I've Built
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {projects.map((item) => (
-              <div
-                key={item.id}
-                className="bg-white rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-              >
-                <ProjectCards
-                  image={item.image}
-                  title={item.title}
-                  description={item.description}
-                  status={item.status}
-                  icons={item.icons}
-                  link={item.links}
-                />
-              </div>
-            ))}
-          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
+          {projects.map((item, index) => (
+            <ProjectCards
+              key={item.id}
+              image={item.image}
+              title={item.title}
+              description={item.description}
+              status={item.status}
+              icons={item.icons}
+              link={item.links}
+              category={item.category}
+              className={
+                index === projects.length - 1
+                  ? "md:col-span-2 xl:col-span-2"
+                  : ""
+              }
+            />
+          ))}
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

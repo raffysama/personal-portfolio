@@ -12,13 +12,18 @@ const skills = [
   { id: 9, icon: "devicon-supabase-plain colored", title: "Supabase" },
   { id: 10, icon: "devicon-figma-plain colored", title: "Figma" },
   { id: 11, icon: "devicon-git-plain colored", title: "Git" },
+  { id: 12, icon: "devicon-vercel-original colored", title: "Vercel" },
+  { id: 13, icon: "devicon-github-original colored", title: "GitHub" },
+  { id: 16, icon: "devicon-bash-plain colored", title: "Git Bash" },
+  { id: 14, icon: "devicon-npm-original-wordmark colored", title: "npm" },
+  { id: 15, icon: "devicon-reactrouter-plain colored", title: "React Router" },
 ];
 
 function Skills() {
   return (
-    <div className="px-6 py-20">
+    <div className="px-6 py-[72px]">
       <h1 className="text-sm font-bold uppercase tracking-widest text-gray-500">
-        Trusted By
+        Skills
       </h1>
       <p className="mt-2 text-2xl md:text-3xl font-bold text-[#005377]">
         Tech I Work With
@@ -27,7 +32,7 @@ function Skills() {
         {skills.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col items-center gap-2 rounded-xl bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+            className="flex flex-col items-center gap-2 rounded-xl bg-white p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
           >
             <i className={`${item.icon} text-4xl`} />
             <span className="text-xs font-medium text-gray-600 text-center">

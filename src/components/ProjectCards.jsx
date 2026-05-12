@@ -1,7 +1,16 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 
-function ProjectCards({ image, title, description, icons, link, status }) {
+function ProjectCards({
+  image,
+  title,
+  description,
+  icons,
+  link,
+  status,
+  category = "Project",
+  className = "",
+}) {
   const isDone = status === "Completed" || status === "Done";
 
   return (
@@ -9,54 +18,50 @@ function ProjectCards({ image, title, description, icons, link, status }) {
       href={link}
       target="_blank"
       rel="noreferrer"
-      className="group relative block w-full h-64 rounded-2xl overflow-hidden cursor-pointer"
+      className={`group relative block h-[280px] overflow-hidden rounded-xl bg-slate-200 shadow-sm ${className}`}
     >
-      {/* Image */}
       {image ? (
         <img
           src={image}
           alt={title}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
       ) : (
-        <div className="absolute inset-0 w-full h-full flex items-center justify-center text-5xl bg-slate-200">
+        <div className="absolute inset-0 flex items-center justify-center bg-slate-200 text-5xl">
           🖥️
         </div>
       )}
 
-      {/* Strong gradient — always dark at bottom */}
-      <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-black/10 transition-opacity duration-300 group-hover:opacity-100" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/25 to-transparent" />
 
-      {/* Status badge */}
-      <span
-        className={`absolute top-3 left-3 text-[11px] font-bold tracking-wide px-2.5 py-1 rounded-full ${
-          isDone ? "bg-green-600 text-white" : "bg-amber-500 text-white"
-        }`}
-      >
-        {status}
-      </span>
-
-      {/* Arrow */}
-      <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-1 group-hover:translate-y-0">
-        <ArrowUpRight className="size-4 text-white" />
+      <div className="absolute left-5 top-5">
+        <span
+          className={`rounded-full px-3 py-1 text-[11px] font-semibold text-white backdrop-blur-md ${
+            isDone ? "bg-emerald-500/80" : "bg-amber-500/80"
+          }`}
+        >
+          {status}
+        </span>
       </div>
 
-      {/* Info panel */}
-      <div className="absolute bottom-0 left-0 right-0 px-4 pb-4 pt-8 translate-y-6 group-hover:translate-y-0 transition-transform duration-300 ease-out">
-        <p className="text-white font-bold text-[15px] leading-snug mb-1 drop-shadow-md">
-          {title}
-        </p>
-        <p className="text-white/75 text-[12px] leading-relaxed line-clamp-2 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 drop-shadow-md">
+      <div className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-white opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100">
+        <ArrowUpRight className="size-4" />
+      </div>
+
+      <div className="absolute bottom-0 left-0 right-0 p-5">
+        <span className="mb-2 inline-flex rounded-full bg-white/20 px-3 py-1 text-[11px] font-semibold text-white backdrop-blur-md">
+          {category}
+        </span>
+
+        <h3 className="text-lg font-bold text-white drop-shadow">{title}</h3>
+
+        <p className="mt-1 line-clamp-2 max-w-xl text-sm leading-relaxed text-white/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           {description}
         </p>
 
-        {/* Icons */}
-        <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+        <div className="mt-3 flex items-center gap-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           {icons.map((icon, index) => (
-            <i
-              key={index}
-              className={`${icon} text-base text-white drop-shadow-md`}
-            />
+            <i key={index} className={`${icon} text-lg text-white`} />
           ))}
         </div>
       </div>

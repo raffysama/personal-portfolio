@@ -103,7 +103,7 @@ function Hero() {
           target="_blank"
           className="hover:scale-110 transition"
         >
-          <i className="devicon-git-plain colored text-2xl"></i>
+          <i className="devicon-github-original colored text-2xl"></i>
         </a>
 
         <a

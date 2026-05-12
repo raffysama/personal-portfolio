@@ -22,7 +22,7 @@ function TimeLineItem() {
       text: "IT Support / Desktop Maintenance",
       company: "University of the East - Manila",
       description:
-        "Maintain and enchanced a produection system used by thousands of users, Built new features, fixed issues and improved performance.",
+        "Maintained and enhanced production systems, supported desktop environments, resolved technical issues, and helped improve day-to-day IT operations.",
     },
   ];
 

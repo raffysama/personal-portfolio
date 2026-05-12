@@ -12,10 +12,10 @@ function Home() {
       <div className="fixed top-0 w-full z-10">
         <Navbar />
       </div>
-      <div className="min-h-min bg-gray-100 bg-cover  w-full px-6 md:px-10 lg:px-16">
+      <div className="min-h-min bg-[#e9ecef] px-3 py-20 bg-cover  w-full  md:px-10 lg:px-16">
         <Hero />
       </div>
-      <div className="w-full px-6 md:px-10 lg:px-16">
+      <div className="w-full bg-[#f4f6f8] px-6 md:px-10 lg:px-16">
         <div id="skills">
           <Skills />
         </div>

@@ -47,8 +47,9 @@ function Hero() {
         </p>
 
         <p className="mt-6 text-lg md:text-base  text-[#1c2333] font-semibold">
-          I build responsive, scalable, and user-friendly web applications that
-          solve real-world problems and deliver seamless digital experiences.
+          I help businesses build fast, modern web applications that turn
+          visitors into customers, simplify daily operations, and create a
+          smoother experience for their users.
         </p>
 
         {/* BUTTONS */}

@@ -84,16 +84,6 @@ function Navbar() {
           ))}
         </ul>
 
-        {/* DESKTOP BUTTON */}
-        <a
-          href="/Raffy_Gumapo_CV.pdf"
-          download="Raffy_Gumapo_CV.pdf"
-          className="hidden lg:flex border border-[#1c2333] text-[#1c2333] font-semibold px-6 py-2 rounded-full items-center gap-3 hover:border-[#1c2333] hover:scale-[1.03] transition-all"
-        >
-          Download CV
-          <Download size={15} strokeWidth={3} />
-        </a>
-
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setOpen(!open)}
@@ -164,29 +154,6 @@ function Navbar() {
               </a>
             ))}
           </nav>
-
-          {/* PUSH TO BOTTOM */}
-          <div className="mt-auto">
-            <div className="my-6 h-px bg-[#06a77d]/20" />
-
-            <p className="text-xs uppercase tracking-widest mb-3 text-[#005377] font-semibold">
-              Get my CV
-            </p>
-
-            <a
-              href="/Raffy_Gumapo_CV.pdf"
-              download="Raffy_Gumapo_CV.pdf"
-              className="w-full flex items-center justify-center gap-3 px-6 py-3 rounded-xl
-          font-semibold transition-all duration-200 hover:scale-[1.02]"
-              style={{
-                background: "#06a77d",
-                color: "#fff",
-              }}
-            >
-              Download CV
-              <Download size={16} />
-            </a>
-          </div>
         </div>
       </div>
     </nav>

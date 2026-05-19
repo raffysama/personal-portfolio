@@ -14,9 +14,11 @@ const skills = [
   { id: 11, icon: "devicon-git-plain colored", title: "Git" },
   { id: 12, icon: "devicon-vercel-original colored", title: "Vercel" },
   { id: 13, icon: "devicon-github-original colored", title: "GitHub" },
-  { id: 16, icon: "devicon-bash-plain colored", title: "Git Bash" },
-  { id: 14, icon: "devicon-npm-original-wordmark colored", title: "npm" },
-  { id: 15, icon: "devicon-reactrouter-plain colored", title: "React Router" },
+  { id: 14, icon: "devicon-bash-plain colored", title: "Git Bash" },
+  { id: 15, icon: "devicon-npm-original-wordmark colored", title: "npm" },
+  { id: 16, icon: "devicon-reactrouter-plain colored", title: "React Router" },
+  { id: 17, icon: "devicon-nextjs-plain colored", title: "Next.js" },
+  { id: 18, icon: "devicon-postman-plain colored", title: "REST API" }
 ];
 
 function Skills() {

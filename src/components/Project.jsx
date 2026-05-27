@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectCards from "./ProjectCards";
 
 const projects = [
@@ -79,6 +78,23 @@ const projects = [
       "devicon-supabase-plain colored",
     ],
     links: "https://warehouse-iq-ten.vercel.app/",
+  },
+  {
+    id: 7,
+    title: "StudyMate",
+    category: "Student Productivity App",
+    description:
+      "A full-stack study platform with authentication, smart notes, flashcards, planner tasks, past exam reviewers, progress tracking, study rooms, shared resources, notifications, file storage, and PWA support.",
+    status: "In-Progress",
+    image: "/images/studymate.png",
+    icons: [
+      "devicon-nextjs-original",
+      "devicon-react-original colored",
+      "devicon-typescript-plain colored",
+      "devicon-tailwindcss-plain colored",
+      "devicon-supabase-plain colored",
+    ],
+    links: "https://studymate-sepia.vercel.app/",
   },
 ];
 

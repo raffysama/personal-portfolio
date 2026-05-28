@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaRegCircleDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { MapPin, Phone } from "lucide-react";

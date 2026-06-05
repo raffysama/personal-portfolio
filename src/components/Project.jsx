@@ -96,6 +96,23 @@ const projects = [
     ],
     links: "https://studymate-sepia.vercel.app/",
   },
+  {
+    id: 8,
+    title: "Lamoderno",
+    category: "E-commerce",
+    description:
+      "A full-stack e-commerce store for La Moderno with product browsing, cart management, user authentication, and order history.",
+    status: "In-Progress",
+    image: "/images/lamoderno.png",
+    icons: [
+      "devicon-nextjs-original",
+      "devicon-react-original colored",
+      "devicon-typescript-plain colored",
+      "devicon-tailwindcss-plain colored",
+      "devicon-supabase-plain colored",
+    ],
+    links: "https://la-moderno.vercel.app/",
+  },
 ];
 
 function Project() {

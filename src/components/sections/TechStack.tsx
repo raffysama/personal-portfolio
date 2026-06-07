@@ -26,7 +26,9 @@ export function TechStack() {
           >
             <div className="flex items-start justify-between gap-3">
               <span className="grid h-11 w-11 place-items-center rounded-2xl border border-[var(--line)] bg-[color-mix(in_srgb,var(--surface-strong)_70%,transparent)]">
-                {skill.title === "Git Bash" ? <Terminal size={24} className="text-[var(--accent-2)]" /> : <i className={`${skill.icon} text-2xl`} />}
+                {skill.title === "Git Bash" ? <Terminal size={24} className="text-[var(--accent-2)]" /> : null}
+                {skill.title === "Next.js" ? <span className="brand-font grid h-7 w-7 place-items-center rounded-full bg-[var(--text)] text-xs font-black text-[var(--bg)]">N</span> : null}
+                {skill.title !== "Git Bash" && skill.title !== "Next.js" ? <i className={`${skill.icon} text-2xl`} /> : null}
               </span>
               <span className="rounded-full border border-[var(--line)] px-2 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--faint)]">
                 {skill.group}

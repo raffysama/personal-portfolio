@@ -6,7 +6,23 @@ import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/data/portfolio";
 import { reveal, stagger } from "@/lib/motion";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+type StackIconProps = {
+  icon?: string;
+  label: string;
+  className?: string;
+};
 
+function StackIcon({ icon, label, className = "text-sm" }: StackIconProps) {
+  if (label === "Next.js") {
+    return (
+      <span className={`brand-font grid size-4 place-items-center rounded-full bg-[var(--text)] text-[9px] font-black leading-none text-[var(--bg)] ${className}`}>
+        N
+      </span>
+    );
+  }
+
+  return icon ? <i className={`${icon} ${className}`} /> : null;
+}
 export function ProjectGallery() {
   const [featuredProject, ...otherProjects] = projects;
 
@@ -67,7 +83,7 @@ export function ProjectGallery() {
                   <div className="flex flex-wrap gap-2">
                     {featuredProject.stack.map((item, itemIndex) => (
                       <span key={item} className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[color-mix(in_srgb,var(--bg)_44%,transparent)] px-3 py-2 text-xs font-semibold text-[var(--text)]">
-                        {featuredProject.icons[itemIndex] ? <i className={`${featuredProject.icons[itemIndex]} text-base`} /> : null}
+                        <StackIcon icon={featuredProject.icons[itemIndex]} label={item} className="text-base" />
                         {item}
                       </span>
                     ))}
@@ -114,9 +130,9 @@ export function ProjectGallery() {
 
                   <div className="mt-6 flex items-end justify-between gap-4">
                     <div className="flex flex-wrap gap-2">
-                      {project.stack.slice(0, 4).map((item, itemIndex) => (
+                      {project.stack.map((item, itemIndex) => (
                         <span key={item} className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] px-2.5 py-1 text-[11px] font-semibold text-[var(--muted)]">
-                          {project.icons[itemIndex] ? <i className={`${project.icons[itemIndex]} text-sm`} /> : null}
+                          <StackIcon icon={project.icons[itemIndex]} label={item} />
                           {item}
                         </span>
                       ))}

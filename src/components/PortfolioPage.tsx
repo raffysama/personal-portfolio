@@ -41,12 +41,16 @@ export function PortfolioPage() {
       setScrolled(window.scrollY > 20);
       setShowTop(window.scrollY > 500);
 
+      const pageBottom = document.documentElement.scrollHeight - window.innerHeight;
+      const isNearBottom = window.scrollY >= pageBottom - 80;
       const viewportAnchor = window.scrollY + 140;
-      const current = sectionIds.reduce((active, id) => {
-        const element = document.getElementById(id);
-        if (!element) return active;
-        return element.offsetTop <= viewportAnchor ? id : active;
-      }, "top");
+      const current = isNearBottom
+        ? "contact"
+        : sectionIds.reduce((active, id) => {
+            const element = document.getElementById(id);
+            if (!element) return active;
+            return element.offsetTop <= viewportAnchor ? id : active;
+          }, "top");
 
       setActiveSection(current);
     };

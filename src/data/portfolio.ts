@@ -42,7 +42,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/raffy-gumapo/",
   resume: "/Raffy_Gumapo_CV.pdf",
   intro:
-    "I build fast, polished web interfaces for dashboards, ecommerce, and business tools with a strong focus on usability, motion, and clean front-end architecture.",
+    "I build fast, polished web interfaces for dashboards, ecommerce, and business tools with a strong focus on usability, responsive layouts, and clean front-end architecture.",
 };
 
 export const navItems: NavItem[] = [
@@ -59,24 +59,24 @@ export const metrics: Metric[] = [
 ];
 
 export const skills: Skill[] = [
-  { icon: "devicon-javascript-plain colored", title: "JavaScript", group: "Language" },
-  { icon: "devicon-typescript-plain colored", title: "TypeScript", group: "Language" },
-  { icon: "devicon-react-original colored", title: "React", group: "Interface" },
-  { icon: "devicon-nextjs-plain", title: "Next.js", group: "Framework" },
-  { icon: "devicon-html5-plain colored", title: "HTML", group: "Markup" },
-  { icon: "devicon-css3-plain colored", title: "CSS", group: "Style" },
-  { icon: "devicon-tailwindcss-plain colored", title: "Tailwind", group: "Style" },
+  { icon: "devicon-javascript-plain colored", title: "JavaScript", group: "Core" },
+  { icon: "devicon-typescript-plain colored", title: "TypeScript", group: "Core" },
+  { icon: "devicon-react-original colored", title: "React", group: "UI" },
+  { icon: "devicon-nextjs-plain", title: "Next.js", group: "App" },
+  { icon: "devicon-html5-plain colored", title: "HTML", group: "UI" },
+  { icon: "devicon-css3-plain colored", title: "CSS", group: "UI" },
+  { icon: "devicon-tailwindcss-plain colored", title: "Tailwind", group: "UI" },
   { icon: "devicon-vite-original colored", title: "Vite", group: "Build" },
-  { icon: "devicon-firebase-plain colored", title: "Firebase", group: "Backend" },
-  { icon: "devicon-supabase-plain colored", title: "Supabase", group: "Backend" },
+  { icon: "devicon-firebase-plain colored", title: "Firebase", group: "Data" },
+  { icon: "devicon-supabase-plain colored", title: "Supabase", group: "Data" },
   { icon: "devicon-figma-plain colored", title: "Figma", group: "Design" },
   { icon: "devicon-git-plain colored", title: "Git", group: "Workflow" },
   { icon: "devicon-vercel-original", title: "Vercel", group: "Deploy" },
   { icon: "devicon-github-original", title: "GitHub", group: "Workflow" },
-  { icon: "devicon-bash-plain colored", title: "Git Bash", group: "CLI" },
+  { icon: "devicon-bash-plain colored", title: "Git Bash", group: "Tools" },
   { icon: "devicon-npm-original-wordmark colored", title: "npm", group: "Package" },
-  { icon: "devicon-reactrouter-plain colored", title: "Router", group: "Routing" },
-  { icon: "devicon-postman-plain colored", title: "REST API", group: "Testing" },
+  { icon: "devicon-reactrouter-plain colored", title: "Router", group: "App" },
+  { icon: "devicon-postman-plain colored", title: "REST API", group: "API" },
 ];
 
 export const projects: Project[] = [
@@ -172,3 +172,4 @@ export const journey: JourneyItem[] = [
     description: "Supported desktop environments, resolved technical issues, and helped keep daily IT operations reliable.",
   },
 ];
+

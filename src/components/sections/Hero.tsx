@@ -160,7 +160,7 @@ export function Hero() {
                   <span className="h-3 w-3 rounded-full bg-emerald-300" />
                 </div>
                 <pre className="m-0 overflow-auto text-xs leading-6 text-[var(--muted)]">
-                  <code>{`const portfolio = {\n  framework: "Next.js",\n  language: "TypeScript",\n  motion: "Framer"\n};`}</code>
+                  <code>{`const portfolio = {\n  framework: "Next.js",\n  language: "TypeScript",\n  Database: "Supabase"\n};`}</code>
                 </pre>
               </div>
             </div>

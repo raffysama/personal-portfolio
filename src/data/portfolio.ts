@@ -34,7 +34,7 @@ export type JourneyItem = {
 
 export const profile = {
   name: "Raffy Gumapo",
-  role: "Frontend Developer",
+  role: "Junior Full Stack Developer",
   email: "raffysama@gmail.com",
   phone: "+63 945 984 2105",
   location: "Valenzuela, Philippines",
@@ -42,13 +42,15 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/raffy-gumapo/",
   resume: "/Raffy_Gumapo_CV.pdf",
   intro:
-    "I build fast, polished web interfaces for dashboards, ecommerce, and business tools with a strong focus on usability, responsive layouts, and clean front-end architecture.",
+    "I build responsive, user-focused web applications from polished interfaces to practical backend features using React, Next.js, TypeScript, and Supabase.",
 };
 
 export const navItems: NavItem[] = [
-  { label: "Tech", href: "skills" },
-  { label: "Gallery", href: "projects" },
-  { label: "Journey", href: "journey" },
+  { label: "Home", href: "top" },
+  { label: "About", href: "about" },
+  { label: "Skills", href: "skills" },
+  { label: "Experience", href: "experience" },
+  { label: "Projects", href: "projects" },
   { label: "Contact", href: "contact" },
 ];
 
@@ -75,7 +77,11 @@ export const skills: Skill[] = [
   { icon: "devicon-css3-plain colored", title: "CSS", group: "UI" },
   { icon: "devicon-tailwindcss-plain colored", title: "Tailwind", group: "UI" },
   { icon: "devicon-vite-original colored", title: "Vite", group: "Build" },
-  { icon: "devicon-firebase-plain colored", title: "Firebase", group: "Data" },
+  {
+    icon: "devicon-amazonwebservices-plain-wordmark colored",
+    title: "AWS",
+    group: "Cloud",
+  },
   { icon: "devicon-supabase-plain colored", title: "Supabase", group: "Data" },
   { icon: "devicon-figma-plain colored", title: "Figma", group: "Design" },
   { icon: "devicon-git-plain colored", title: "Git", group: "Workflow" },

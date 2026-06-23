@@ -16,13 +16,10 @@ export function ThemeToggle({ theme, onToggle }: ThemeToggleProps) {
     <button
       type="button"
       aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
-      className="brand-font inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--line)] bg-[var(--surface)] px-2.5 text-sm font-medium text-[var(--muted)] transition hover:text-[var(--text)]"
+      className="icon-button"
       onClick={onToggle}
     >
-      <span className="grid h-7 w-7 place-items-center rounded-lg bg-[color-mix(in_srgb,var(--accent)_13%,transparent)] text-[var(--accent)]">
-        {isDark ? <Moon size={15} /> : <Sun size={15} />}
-      </span>
-      <span className="hidden sm:inline">{isDark ? "Dark" : "Light"}</span>
+      {isDark ? <Moon size={18} /> : <Sun size={18} />}
     </button>
   );
 }

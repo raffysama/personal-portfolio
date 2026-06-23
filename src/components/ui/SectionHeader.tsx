@@ -11,15 +11,15 @@ type SectionHeaderProps = {
 export function SectionHeader({ eyebrow, title, text }: SectionHeaderProps) {
   return (
     <motion.div
-      className="max-w-3xl"
-      initial={{ opacity: 0, y: 24 }}
+      className="max-w-2xl"
+      initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.55 }}
     >
-      <p className="brand-font text-xs font-bold uppercase tracking-[0.22em] text-[var(--accent)]">{eyebrow}</p>
-      <h2 className="brand-font mt-3 text-3xl font-bold leading-tight text-[var(--text)] md:text-5xl">{title}</h2>
-      <p className="mt-4 text-base leading-7 text-[var(--muted)]">{text}</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">{eyebrow}</p>
+      <h2 className="mt-3 font-heading text-3xl font-semibold leading-tight text-[var(--text)] sm:text-4xl">{title}</h2>
+      {text ? <p className="mt-4 text-base leading-7 text-[var(--muted)]">{text}</p> : null}
     </motion.div>
   );
 }

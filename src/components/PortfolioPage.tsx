@@ -1,19 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { Navbar } from "@/components/layout/Navbar";
+import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
 import { Hero } from "@/components/sections/Hero";
 import { Journey } from "@/components/sections/Journey";
 import { ProjectGallery } from "@/components/sections/ProjectGallery";
 import { TechStack } from "@/components/sections/TechStack";
-import { LoadingScreen } from "@/components/ui/LoadingScreen";
 import type { ThemeMode } from "@/components/ui/ThemeToggle";
+import { navItems } from "@/data/portfolio";
 
 export function PortfolioPage() {
-  const [booting, setBooting] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showTop, setShowTop] = useState(false);
@@ -34,42 +34,50 @@ export function PortfolioPage() {
   }, [theme]);
 
   useEffect(() => {
-    const bootTimer = window.setTimeout(() => setBooting(false), 900);
-    const sectionIds = ["top", "skills", "projects", "journey", "contact"];
+    const sectionIds = navItems.map((item) => item.href);
+    let animationFrame = 0;
 
-    const onScroll = () => {
+    const updatePageState = () => {
       setScrolled(window.scrollY > 20);
       setShowTop(window.scrollY > 500);
 
       const pageBottom = document.documentElement.scrollHeight - window.innerHeight;
-      const isNearBottom = window.scrollY >= pageBottom - 80;
-      const viewportAnchor = window.scrollY + 140;
-      const current = isNearBottom
-        ? "contact"
-        : sectionIds.reduce((active, id) => {
-            const element = document.getElementById(id);
-            if (!element) return active;
-            return element.offsetTop <= viewportAnchor ? id : active;
-          }, "top");
+      const isNearBottom = window.scrollY >= pageBottom - 48;
+      const viewportAnchor = Math.min(window.innerHeight * 0.32, 240);
+      let current = sectionIds[0];
 
-      setActiveSection(current);
+      for (const id of sectionIds) {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top <= viewportAnchor) {
+          current = id;
+        }
+      }
+
+      setActiveSection(isNearBottom ? "contact" : current);
     };
 
-    onScroll();
+    const onScroll = () => {
+      if (animationFrame) return;
+      animationFrame = window.requestAnimationFrame(() => {
+        updatePageState();
+        animationFrame = 0;
+      });
+    };
+
+    updatePageState();
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
     return () => {
-      window.clearTimeout(bootTimer);
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
     };
   }, []);
 
   const toggleTheme = () => setTheme((current) => (current === "dark" ? "light" : "dark"));
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_18%_12%,color-mix(in_srgb,var(--accent)_16%,transparent),transparent_32rem),radial-gradient(circle_at_88%_18%,color-mix(in_srgb,var(--accent-2)_12%,transparent),transparent_30rem),linear-gradient(180deg,var(--bg),var(--bg-soft)_48%,var(--bg))] text-[var(--text)]">
-      <AnimatePresence>{booting && <LoadingScreen />}</AnimatePresence>
-      <div className="pointer-events-none fixed inset-0 z-0 bg-[linear-gradient(90deg,color-mix(in_srgb,var(--text)_4%,transparent)_1px,transparent_1px),linear-gradient(0deg,color-mix(in_srgb,var(--text)_4%,transparent)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:linear-gradient(to_bottom,black_0%,black_68%,transparent_100%)]" />
-
+    <div className="min-h-screen overflow-x-hidden bg-[var(--bg)] text-[var(--text)]">
       <Navbar
         menuOpen={menuOpen}
         scrolled={scrolled}
@@ -79,11 +87,12 @@ export function PortfolioPage() {
         onThemeToggle={toggleTheme}
       />
 
-      <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.45, delay: 0.1 }}>
+      <motion.main initial={false} animate={{ opacity: 1 }}>
         <Hero />
+        <About />
         <TechStack />
-        <ProjectGallery />
         <Journey />
+        <ProjectGallery />
         <Contact />
       </motion.main>
 

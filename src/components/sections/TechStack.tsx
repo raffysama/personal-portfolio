@@ -8,36 +8,30 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export function TechStack() {
   return (
-    <section id="skills" className="mx-auto w-[min(100%-2rem,1240px)] py-20 sm:w-[min(100%-3rem,1240px)] sm:py-24">
-      <SectionHeader
-        eyebrow="Tech Stack"
-        title="Tools I use to build and ship."
-        text="A practical stack for responsive interfaces, dashboards, API-driven features, and production deployment."
-      />
+    <section id="skills" className="border-b border-[var(--line)] py-16 sm:py-20">
+      <div className="section-shell grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
+        <SectionHeader
+          eyebrow="Skills"
+          title="A practical full-stack toolkit."
+          text="Technologies I use across interface development, application logic, data, and deployment."
+        />
 
-      <motion.div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6" variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-        {skills.map((skill, index) => (
-          <motion.div
-            key={skill.title}
-            variants={reveal}
-            transition={{ duration: 0.4, delay: index * 0.01 }}
-            whileHover={{ y: -5 }}
-            className="group rounded-[22px] border border-[var(--line)] bg-[var(--surface)] p-4 shadow-[0_14px_45px_rgba(0,0,0,0.10)] backdrop-blur-xl transition hover:border-[color-mix(in_srgb,var(--accent)_38%,transparent)]"
-          >
-            <div className="flex items-start justify-between gap-3">
-              <span className="grid h-11 w-11 place-items-center rounded-2xl border border-[var(--line)] bg-[color-mix(in_srgb,var(--surface-strong)_70%,transparent)]">
-                {skill.title === "Git Bash" ? <Terminal size={24} className="text-[var(--accent-2)]" /> : null}
-                {skill.title === "Next.js" ? <span className="brand-font grid h-7 w-7 place-items-center rounded-full bg-[var(--text)] text-xs font-black text-[var(--bg)]">N</span> : null}
-                {skill.title !== "Git Bash" && skill.title !== "Next.js" ? <i className={`${skill.icon} text-2xl`} /> : null}
+        <motion.div className="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--line)] sm:grid-cols-3" variants={stagger} initial={false} whileInView="visible" viewport={{ once: true, amount: 0.15 }}>
+          {skills.map((skill) => (
+            <motion.div key={skill.title} variants={reveal} className="group flex items-center gap-3 bg-[var(--surface)] p-4 transition-colors hover:bg-[var(--surface-hover)]">
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-[var(--accent-soft)]">
+                {skill.title === "Git Bash" ? <Terminal size={20} className="text-[var(--accent)]" /> : null}
+                {skill.title === "Next.js" ? <span className="grid h-5 w-5 place-items-center rounded-full bg-[var(--text)] text-[8px] font-bold text-[var(--bg)]">N</span> : null}
+                {skill.title !== "Git Bash" && skill.title !== "Next.js" ? <i className={`${skill.icon} text-xl`} /> : null}
               </span>
-              <span className="rounded-full border border-[var(--line)] px-2 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--faint)]">
-                {skill.group}
-              </span>
-            </div>
-            <p className="mt-5 text-sm font-bold text-[var(--text)]">{skill.title}</p>
-          </motion.div>
-        ))}
-      </motion.div>
+              <div className="min-w-0">
+                <p className="truncate text-sm font-medium text-[var(--text)]">{skill.title}</p>
+                <p className="mt-0.5 text-[11px] text-[var(--faint)]">{skill.group}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 }
